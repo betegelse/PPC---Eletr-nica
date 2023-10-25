@@ -1,0 +1,117 @@
+\documentclass[undgrad,numbers]{Controle/DES}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{epigraph}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+%\usepackage{csquotes}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage[refpage]{nomencl}
+\usepackage{lettrine}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage[RPvoltages, american, cuteinductors,smartlabels]{circuitikz}
+%\usepackage[]{circuitikz}
+\usepackage{color, colortbl}
+\usepackage{ctable}
+%\setlength{\arrayrulewidth}{0.5mm}
+\usepackage[document]{ragged2e}
+\usepackage{lmodern}
+\usepackage{pdfpages}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage[alf]{abntex2cite}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\makelosymbols
+\makeloabbreviations
+\justifying
+
+\begin{document}
+  \title{Projeto Pedagógico do Curso de Engenharia Eletrônica} %Máximo de 4 linhas
+  \foreigntitle{My great title in english here}
+  \author{Primeiro nome}{Sobrenome1 Sobrenome2} %Nome do(a) autor(a)
+
+  \advisor{Prof.}{Nome do(a) Orientador(a)}{D.Sc.} %Nome do(a) orientador(a)
+  \newcommand{\exinsto}{Universidade Federal de Pernambuco} %IES do Orientador
+
+  \examiner{Prof.}{Nome do(a) primeiro(a) examinador(a)}{D.Sc.}
+  \newcommand{\exinstum}{Universidade Federal de Pernambuco} %IES do primeiro examinador
+
+  \examiner{Prof.}{Nome do(a) segundo(a) examinador(a)}{Ph.D.}
+  \newcommand{\exinstdois}{Universidade Federal de Pernambuco} %IES do segundo examinador
+
+  \coadvisor{Prof.}{Nome do(a) Coorientador(a)}{D.Sc.}
+  % Coloque % no segundo examinador, caso não tenha.
+  % Coloque % no Coorientador, caso não tenha.
+
+  \department{DES-ELE} % DES-TEL para Telecomunicações
+  \date{\the\month}{\the\year}
+
+  \newcommand{\Datadadefesa}{xx/xx/20xx}%Coloque a data da defesa dd/mm/aaaa
+
+  \mainmatter
+  %\include{Arquivos/dedic} %Dedicatória
+  %\include{Arquivos/thanks} %Agradecimentos
+  %\include{Arquivos/epigraph} %Epígrafe
+  %\include{Arquivos/resumo} %Resumo em português
+  %\include{Arquivos/abstract} %Resumo em inglês 
+
+  %\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+\cleardoublepage
+\begingroup
+  \makeatletter
+  \let\ps@plain\ps@empty
+  \makeatother
+
+  \pagestyle{empty}
+  \tableofcontents
+  \listoffigures %Gerar a lista de Ilustrações
+  \listoftables %Gerar a lista de Tabelas
+  \cleardoublepage
+
+  %\include{Arquivos/list_of_symb}  %Gerar a lista de Símbolos
+  %\include{Arquivos/list_of_abb}  %Gerar a lista de Abreviaturas
+\endgroup
+
+  \pagestyle{plain}
+  \include{Arquivos/chap01} %Gerar o Capítulo 1
+  \include{Arquivos/chap02} %Gerar o Capítulo 2
+  \include{Arquivos/chap03} %Gerar o Capítulo 3
+  \include{Arquivos/chap04} %Gerar o Capítulo 4
+  \include{Arquivos/chap05} %Gerar o Capítulo 5
+  \include{Arquivos/chap06} %Gerar o Capítulo 6
+  \include{Arquivos/chap07} %Gerar o Capítulo 7
+  \include{Arquivos/chap08} %Gerar o Capítulo 8
+  \include{Arquivos/chap09} %Gerar o Capítulo 9
+  \include{Arquivos/chap10} %Gerar o Capítulo 10
+  \include{Arquivos/chap11} %Gerar o Capítulo 11
+  \include{Arquivos/chap12} %Gerar o Capítulo 12
+  \include{Arquivos/chap13} %Gerar o Capítulo 13
+  \include{Arquivos/chap14} %Gerar o Capítulo 14
+  \include{Arquivos/chap15} %Gerar o Capítulo 15
+  \include{Arquivos/chap16} %Gerar o Capítulo 16
+  \include{Arquivos/chap17} %Gerar o Capítulo 17
+  \include{Arquivos/chap18} %Gerar o Capítulo 18
+  \backmatter
+  \bibliography{Arquivos/DES}
+  
+  \appendix % Coloque % nesta linha caso não tenha Apêndices
+  \include{Arquivos/ApendiceA} % Coloque % nesta linha caso não tenha o Apêndice A
+  \include{Arquivos/ApendiceB} % Coloque % nesta linha caso não tenha o Apêndice B
+  %(Se precisar, crie o arquivo Arquivos/ApendiceC para o apêndice C e assim por diante e inclua uma linha para cada apêndice adicionado)
+  
+  \anexos  % Coloque % nesta linha caso não tenha anexos
+  \include{Arquivos/AnexoA} % Coloque % nesta linha caso não tenha o Anexo A
+  \include{Arquivos/AnexoB} % Coloque % nesta linha caso não tenha o Anexo B
+  %(Se precisar, crie o arquivo Arquivos/AnexoC para o anexo C e assim por diante e inclua uma linha para cada anexo adicionado)
+  
+\end{document}
